@@ -369,10 +369,10 @@ curl localhost:80
 
 - Сценарий "Как 'подключиться' к работающему контейнеру?"
 ```shell
-docker container logs
-docker container attach --sig-proxy=false # otherwise detach key `ctrl-c` will stop container 
-docker container top
-docker container exec -it /bin/sh
+docker container logs <container-name>
+docker container attach --sig-proxy=false <container-name> # otherwise detach key `ctrl-c` will stop container 
+docker container top <container-name>
+docker container exec -it <container-name> /bin/sh
 ```
 
 - Сценарий "Как посмотреть свойства контейнера?"
